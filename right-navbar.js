@@ -20,9 +20,18 @@ function createRightNavbar() {
     
     const currentPage = getCurrentPageName();
     const pages = {
-        'index.html': { name: 'Home', icon: '🏠' },
-        'gallery.html': { name: 'Gallery', icon: '🎨' },
-        'documentation.html': { name: 'Documentation', icon: '📚' }
+        'index.html': { 
+            name: 'Home', 
+            icon: 'icons/home.png'
+        },
+        'gallery.html': { 
+            name: 'Gallery', 
+            icon: 'icons/gallery.png'
+        },
+        'documentation.html': { 
+            name: 'Documentation', 
+            icon: 'icons/documentation.png'
+        }
     };
     
     Object.entries(pages).forEach(([page, data]) => {
@@ -32,7 +41,9 @@ function createRightNavbar() {
         navItem.setAttribute('title', data.name);
         
         navItem.innerHTML = `
-            <div class="nav-icon-right"></div>
+            <div class="nav-icon-right">
+                <img src="${data.icon}" alt="${data.name}" class="nav-icon-img">
+            </div>
             <span class="nav-text-right">${data.name}</span>
         `;
         
