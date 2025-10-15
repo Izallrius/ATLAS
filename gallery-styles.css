@@ -56,7 +56,6 @@
     border: 2px solid rgba(152, 0, 0, 0.3);
     border-radius: 10px;
 }
-
 .grid-overlay {
     position: absolute;
     top: 0;
@@ -981,5 +980,4 @@
         gap: 1rem;
         justify-content: center;
     }
-
 }

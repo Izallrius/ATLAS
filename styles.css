@@ -872,3 +872,422 @@ html {
         text-align: center;
     }
 }
+
+/* Documentation Header */
+.doc-header {
+    min-height: 60vh;
+    background: linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 12rem 2rem 4rem; /* Increased top padding from 8rem to 12rem */
+}
+
+.doc-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.doc-title .title-line {
+    display: block;
+    background: linear-gradient(90deg, #FFFFFF 0%, #980000 50%, #FFFFFF 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+.doc-title .title-subtitle {
+    display: block;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: normal;
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.doc-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Algorithm Section */
+.algorithm-section {
+    padding: 8rem 0;
+    background: #000000;
+}
+
+.algorithm-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.flow-step {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.flow-step:hover {
+    border-color: #980000;
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(152, 0, 0, 0.2);
+}
+
+.flow-step h3 {
+    color: #980000;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.flow-step p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+.code-block {
+    background: #0a0a0a;
+    border: 1px solid rgba(152, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.code-block code {
+    color: #ffffff;
+}
+
+/* Implementation Section */
+.implementation-section {
+    padding: 8rem 0;
+    background: linear-gradient(180deg, #111111 0%, #000000 100%);
+}
+
+.implementation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.impl-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.impl-card:hover {
+    border-color: #980000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(152, 0, 0, 0.2);
+}
+
+.impl-card h3 {
+    color: #980000;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.impl-list {
+    list-style: none;
+    padding: 0;
+}
+
+.impl-list li {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(152, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.impl-list li:last-child {
+    border-bottom: none;
+}
+
+.impl-list strong {
+    color: #980000;
+}
+
+/* Calibration Section */
+.calibration-section {
+    padding: 8rem 0;
+    background: #000000;
+}
+
+.calibration-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.calib-step {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.calib-step:hover {
+    border-color: #980000;
+    box-shadow: 0 10px 30px rgba(152, 0, 0, 0.2);
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #980000;
+    min-width: 80px;
+    text-align: center;
+}
+
+.step-content h3 {
+    color: #980000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.calib-details {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 3px solid #980000;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.calib-details strong {
+    color: #980000;
+}
+
+/* Performance Section */
+.performance-section {
+    padding: 8rem 0;
+    background: linear-gradient(180deg, #111111 0%, #000000 100%);
+}
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    border-color: #980000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(152, 0, 0, 0.2);
+}
+
+.metric-value {
+    color: #980000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.metric-desc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Performance Chart */
+.performance-chart {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    margin-top: 3rem;
+}
+
+.performance-chart h3 {
+    color: #980000;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chart-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 350px;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Grid lines */
+.chart-bars::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to top,
+        transparent,
+        transparent 49px,
+        rgba(152, 0, 0, 0.15) 49px,
+        rgba(152, 0, 0, 0.15) 50px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.chart-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.bar-fill {
+    width: 60px;
+    background: linear-gradient(to top, #980000 0%, #ff4444 100%);
+    border-radius: 5px 5px 0 0;
+    transition: all 0.5s ease;
+    position: relative;
+    box-shadow: 0 0 15px rgba(152, 0, 0, 0.4);
+    transform-origin: bottom;
+    animation: barGrowUp 1s ease-out forwards;
+}
+
+.chart-bar:nth-child(1) .bar-fill {
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.chart-bar:nth-child(2) .bar-fill {
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.chart-bar:nth-child(3) .bar-fill {
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.chart-bar:nth-child(4) .bar-fill {
+    animation-delay: 0.8s;
+    opacity: 0;
+}
+
+@keyframes barGrowUp {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.chart-bar:hover .bar-fill {
+    background: linear-gradient(to top, #cc0000, #ff6666);
+    box-shadow: 0 0 25px rgba(152, 0, 0, 0.7);
+    transform: scaleY(1.05);
+}
+
+.bar-value {
+    color: #980000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.bar-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chart-bars {
+        height: 280px;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .bar-fill {
+        width: 40px;
+    }
+    
+    .bar-label {
+        font-size: 0.8rem;
+    }
+    
+    .bar-value {
+        font-size: 0.9rem;
+    }
+}s
