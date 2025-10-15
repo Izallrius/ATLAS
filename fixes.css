@@ -1,0 +1,229 @@
+/* A.T.L.A.S Website Fixes */
+
+/* Fix for home page title display */
+.hero-title .title-line {
+    display: block;
+    font-size: 4rem;
+    background: linear-gradient(90deg, #FFFFFF 0%, #980000 50%, #FFFFFF 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+    line-height: 1.1;
+}
+
+/* Fix for gallery header text container */
+.gallery-header {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 2rem 4rem; /* Added horizontal padding */
+}
+
+.gallery-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* Ensure proper container padding */
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-description {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    line-height: 1.7;
+    padding: 0 1rem; /* Add padding to prevent text overflow */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    box-sizing: border-box;
+}
+
+/* Fix for documentation page title positioning */
+.doc-header {
+    padding: 14rem 0 6rem; /* Increased top padding to clear navbar */
+    background: linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%);
+    text-align: center;
+    margin-top: 0;
+}
+
+.doc-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    margin-top: 2rem; /* Additional margin to ensure it's below navbar */
+}
+
+/* Enhanced navbar to ensure it doesn't cover content */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(152, 0, 0, 0.3);
+    height: 80px; /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure all page content starts below navbar */
+body {
+    padding-top: 0; /* Remove any body padding that might interfere */
+}
+
+.hero {
+    padding-top: 80px; /* Add padding to account for fixed navbar */
+}
+
+/* Mobile responsiveness fixes */
+@media (max-width: 768px) {
+    .gallery-description {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+        max-width: 100%;
+    }
+    
+    .doc-header {
+        padding: 12rem 1rem 4rem; /* Adjust for mobile */
+    }
+    
+    .doc-title {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+    
+    .gallery-header {
+        padding: 10rem 1rem 3rem;
+    }
+    
+    .hero-title .title-line {
+        font-size: 2.5rem;
+    }
+}
+
+/* Fix for text overflow in all sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* Ensure proper text containment */
+p, .description, .title-subtitle {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Fix for title subtitle styling */
+.title-subtitle {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: normal;
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+/* Enhanced floating navigation positioning */
+.floating-nav {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid rgba(152, 0, 0, 0.5);
+    border-radius: 25px;
+    padding: 15px 10px;
+    z-index: 2000;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    width: 60px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional mobile fixes */
+@media (max-width: 480px) {
+    .floating-nav {
+        right: 15px;
+        width: 45px;
+        padding: 12px 8px;
+    }
+    
+    .gallery-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+    
+    .doc-header {
+        padding: 11rem 0.5rem 3rem;
+    }
+}
+
+/* Improved text readability */
+.section-title,
+.gallery-title,
+.doc-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+/* Fix for any text that might overflow containers */
+* {
+    box-sizing: border-box;
+}
+
+.hero-description,
+.gallery-description,
+.doc-description {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Enhanced container management */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+}
+
+/* Smooth scroll behavior enhancement */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Account for fixed navbar */
+}
+
+/* Loading states for better UX */
+.page-loading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}

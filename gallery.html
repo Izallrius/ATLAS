@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.T.L.A.S Gallery - System Demonstrations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="gallery-styles.css">
+    <link rel="stylesheet" href="right-navbar.css">
+</head>
+<body>
+        <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">A.<span class="logo-highlight">T</span>.L.A.S</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#demonstrations" class="nav-link">Demonstrations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#3d-model" class="nav-link">3D Model</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testing" class="nav-link">Testing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#deployment" class="nav-link">Deployment</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <div class="container">
+            <h1 class="gallery-title">
+                <span class="title-line">System Gallery</span>
+                <span class="title-subtitle">A.T.L.A.S in Action</span>
+            </h1>
+            <p class="gallery-description">
+                Explore real-world demonstrations, 3D visualizations, and testing footage 
+                of the Advanced Tactical Laser Aiming Shooter system in various operational scenarios.
+            </p>
+        </div>
+        <div class="header-visual">
+            <div class="scanning-grid">
+                <div class="grid-overlay"></div>
+                <div class="scan-line"></div>
+                <div class="target-markers">
+                    <div class="marker" style="top: 20%; left: 30%;"></div>
+                    <div class="marker" style="top: 60%; left: 70%;"></div>
+                    <div class="marker" style="top: 40%; left: 50%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demonstrations -->
+    <section id="demonstrations" class="demonstrations-section">
+        <div class="container">
+            <h2 class="section-title">Live Demonstrations</h2>
+            <div class="demo-grid">
+                <div class="demo-card" data-demo="real-time">
+                    <div class="demo-preview">
+                        <div class="demo-screen">
+                            <div class="detection-overlay">
+                                <div class="target-box">
+                                    <div class="target-label">Target: Human</div>
+                                    <div class="confidence">Confidence: 98.7%</div>
+                                    <div class="crosshair-demo"></div>
+                                </div>
+                                <div class="status-indicators">
+                                    <div class="status-item">
+                                        <span class="status-dot active"></span>
+                                        <span>Detection: ACTIVE</span>
+                                    </div>
+                                    <div class="status-item">
+                                        <span class="status-dot tracking"></span>
+                                        <span>Tracking: LOCKED</span>
+                                    </div>
+                                    <div class="status-item">
+                                        <span class="status-dot ready"></span>
+                                        <span>Laser: READY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>Real-Time Detection</h3>
+                        <p>Live demonstration of YOLOv9 human detection with 98%+ accuracy in real-world conditions.</p>
+                        <div class="demo-stats">
+                            <div class="stat">
+                                <span class="stat-value">33</span>
+                                <span class="stat-label">FPS</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">&lt;50ms</span>
+                                <span class="stat-label">Latency</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-demo="tracking">
+                    <div class="demo-preview">
+                        <div class="demo-screen">
+                            <div class="tracking-overlay">
+                                <div class="track-path">
+                                    <div class="path-point" style="top: 30%; left: 20%;"></div>
+                                    <div class="path-point" style="top: 40%; left: 35%;"></div>
+                                    <div class="path-point" style="top: 50%; left: 50%;"></div>
+                                    <div class="path-point" style="top: 60%; left: 65%;"></div>
+                                    <div class="path-point" style="top: 70%; left: 80%;"></div>
+                                </div>
+                                <div class="prediction-cone"></div>
+                                <div class="tracking-info">
+                                    <div>Track ID: #001</div>
+                                    <div>Velocity: 2.3 m/s</div>
+                                    <div>Prediction: 85%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>Multi-Target Tracking</h3>
+                        <p>SORT algorithm maintains continuous lock on moving targets with predictive path analysis.</p>
+                        <div class="demo-stats">
+                            <div class="stat">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Max Targets</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">92%</span>
+                                <span class="stat-label">Track Stability</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">2s</span>
+                                <span class="stat-label">Lock Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-demo="precision">
+                    <div class="demo-preview">
+                        <div class="demo-screen">
+                            <div class="precision-overlay">
+                                <div class="target-grid">
+                                    <div class="grid-lines"></div>
+                                    <div class="accuracy-circle">
+                                        <div class="hit-marker" style="top: 48%; left: 52%;"></div>
+                                        <div class="hit-marker" style="top: 51%; left: 49%;"></div>
+                                        <div class="hit-marker" style="top: 49%; left: 51%;"></div>
+                                        <div class="hit-marker" style="top: 52%; left: 48%;"></div>
+                                        <div class="hit-marker" style="top: 50%; left: 50%;"></div>
+                                    </div>
+                                    <div class="distance-indicator">2.0m</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>Precision Targeting</h3>
+                        <p>±5cm accuracy at 2 meters with servo-controlled positioning and geometric analysis.</p>
+                        <div class="demo-stats">
+                            <div class="stat">
+                                <span class="stat-value">±5cm</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">0.1°</span>
+                                <span class="stat-label">Precision</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">180°</span>
+                                <span class="stat-label">Range</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Model Viewer -->
+    <section id="3d-model" class="model-section">
+        <div class="container">
+            <h2 class="section-title">3D System Model</h2>
+            <div class="model-viewer">
+                <div class="model-container">
+                    <div class="model-display">
+                        <div class="turret-3d">
+                            <div class="base-platform"></div>
+                            <div class="rotating-mount"></div>
+                            <div class="camera-module"></div>
+                            <div class="laser-assembly"></div>
+                            <div class="control-unit"></div>
+                        </div>
+                        <div class="model-controls">
+                            <button class="control-btn" data-view="front">Front</button>
+                            <button class="control-btn" data-view="side">Side</button>
+                            <button class="control-btn" data-view="top">Top</button>
+                            <button class="control-btn" data-view="iso">3D View</button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>System Components</h3>
+                        <div class="component-list">
+                            <div class="component-item active" data-component="camera">
+                                <div class="component-icon">📷</div>
+                                <div class="component-details">
+                                    <h4>Camera Module</h4>
+                                    <p>Pi Camera v3 - 12MP with IR sensitivity</p>
+                                </div>
+                            </div>
+                            <div class="component-item" data-component="laser">
+                                <div class="component-icon">🔴</div>
+                                <div class="component-details">
+                                    <h4>Laser Assembly</h4>
+                                    <p>650nm Red Laser - 5mW Class 3R</p>
+                                </div>
+                            </div>
+                            <div class="component-item" data-component="servo">
+                                <div class="component-icon">⚙️</div>
+                                <div class="component-details">
+                                    <h4>Servo Motors</h4>
+                                    <p>MG996R Digital - 0.1° precision</p>
+                                </div>
+                            </div>
+                            <div class="component-item" data-component="control">
+                                <div class="component-icon">🖥️</div>
+                                <div class="component-details">
+                                    <h4>Control Unit</h4>
+                                    <p>Raspberry Pi 5 - ARM Cortex-A76</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Results -->
+    <section id="testing" class="testing-section">
+        <div class="container">
+            <h2 class="section-title">Field Testing Results</h2>
+            <div class="testing-dashboard">
+                <div class="test-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">🎯</div>
+                        <div class="summary-data">
+                            <h3>Accuracy Tests</h3>
+                            <div class="summary-value">95.7%</div>
+                            <div class="summary-label">Hit Rate @ 2m</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">⚡</div>
+                        <div class="summary-data">
+                            <h3>Response Time</h3>
+                            <div class="summary-value">187ms</div>
+                            <div class="summary-label">Average Lock-to-Fire</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🔄</div>
+                        <div class="summary-data">
+                            <h3>Reliability</h3>
+                            <div class="summary-value">99.2%</div>
+                            <div class="summary-label">Uptime (100+ cycles)</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🌡️</div>
+                        <div class="summary-data">
+                            <h3>Environmental</h3>
+                            <div class="summary-value">-10°C to 50°C</div>
+                            <div class="summary-label">Operating Range</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="test-details">
+                    <div class="test-category">
+                        <h3>Environmental Testing</h3>
+                        <div class="test-grid">
+                            <div class="test-result">
+                                <div class="test-name">Daylight Operation</div>
+                                <div class="test-score">PASS</div>
+                                <div class="test-desc">95% accuracy in bright sunlight</div>
+                            </div>
+                            <div class="test-result">
+                                <div class="test-name">Night Vision</div>
+                                <div class="test-score">PASS</div>
+                                <div class="test-desc">88% accuracy with IR mode</div>
+                            </div>
+                            <div class="test-result">
+                                <div class="test-name">Weather Resistance</div>
+                                <div class="test-score">PASS</div>
+                                <div class="test-desc">Operational in light rain/dust</div>
+                            </div>
+                            <div class="test-result">
+                                <div class="test-name">Temperature Stress</div>
+                                <div class="test-score">PASS</div>
+                                <div class="test-desc">Stable from -10°C to 50°C</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deployment Scenarios -->
+    <section id="deployment" class="deployment-section">
+        <div class="container">
+            <h2 class="section-title">Deployment Scenarios</h2>
+            <div class="scenario-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="border">Border Security</button>
+                    <button class="tab-btn" data-tab="base">Base Defense</button>
+                    <button class="tab-btn" data-tab="tactical">Tactical Ops</button>
+                    <button class="tab-btn" data-tab="urban">Urban Patrol</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-panel active" id="border-tab">
+                        <div class="scenario-content">
+                            <div class="scenario-visual">
+                                <div class="border-scene">
+                                    <div class="terrain"></div>
+                                    <div class="border-fence"></div>
+                                    <div class="atlas-unit"></div>
+                                    <div class="detection-zone"></div>
+                                </div>
+                            </div>
+                            <div class="scenario-details">
+                                <h3>Border Security Operations</h3>
+                                <p>Autonomous perimeter monitoring with 24/7 surveillance capability for border patrol and checkpoint security.</p>
+                                <ul class="feature-list">
+                                    <li>360° scanning capability</li>
+                                    <li>Long-range detection (up to 50m)</li>
+                                    <li>Weather-resistant operation</li>
+                                    <li>Solar power integration</li>
+                                    <li>Remote monitoring dashboard</li>
+                                </ul>
+                                <div class="deployment-stats">
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">50m</span>
+                                        <span class="stat-text">Detection Range</span>
+                                    </div>
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">24/7</span>
+                                        <span class="stat-text">Operation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="base-tab">
+                        <div class="scenario-content">
+                            <div class="scenario-visual">
+                                <div class="base-scene">
+                                    <div class="base-perimeter"></div>
+                                    <div class="guard-towers"></div>
+                                    <div class="atlas-network"></div>
+                                </div>
+                            </div>
+                            <div class="scenario-details">
+                                <h3>Military Base Defense</h3>
+                                <p>Integrated defense network for military installations with coordinated multi-unit operation.</p>
+                                <ul class="feature-list">
+                                    <li>Multi-unit coordination</li>
+                                    <li>Command center integration</li>
+                                    <li>Threat assessment AI</li>
+                                    <li>Automated response protocols</li>
+                                    <li>IFF (Identify Friend or Foe)</li>
+                                </ul>
+                                <div class="deployment-stats">
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">10+</span>
+                                        <span class="stat-text">Networked Units</span>
+                                    </div>
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">99.9%</span>
+                                        <span class="stat-text">Uptime</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="tactical-tab">
+                        <div class="scenario-content">
+                            <div class="scenario-visual">
+                                <div class="tactical-scene">
+                                    <div class="urban-terrain"></div>
+                                    <div class="mobile-unit"></div>
+                                    <div class="tactical-grid"></div>
+                                </div>
+                            </div>
+                            <div class="scenario-details">
+                                <h3>Tactical Operations</h3>
+                                <p>Mobile deployment for special operations with rapid setup and advanced threat assessment.</p>
+                                <ul class="feature-list">
+                                    <li>Rapid deployment (5 min setup)</li>
+                                    <li>Portable power systems</li>
+                                    <li>Stealth operation mode</li>
+                                    <li>Encrypted communications</li>
+                                    <li>Mission-specific calibration</li>
+                                </ul>
+                                <div class="deployment-stats">
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">5min</span>
+                                        <span class="stat-text">Setup Time</span>
+                                    </div>
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">12h</span>
+                                        <span class="stat-text">Battery Life</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="urban-tab">
+                        <div class="scenario-content">
+                            <div class="scenario-visual">
+                                <div class="urban-scene">
+                                    <div class="city-buildings"></div>
+                                    <div class="patrol-route"></div>
+                                    <div class="surveillance-points"></div>
+                                </div>
+                            </div>
+                            <div class="scenario-details">
+                                <h3>Urban Patrol Systems</h3>
+                                <p>Civilian area monitoring with enhanced safety protocols and crowd management capabilities.</p>
+                                <ul class="feature-list">
+                                    <li>Crowd density analysis</li>
+                                    <li>Non-lethal operation modes</li>
+                                    <li>Privacy protection features</li>
+                                    <li>Emergency response integration</li>
+                                    <li>Real-time threat assessment</li>
+                                </ul>
+                                <div class="deployment-stats">
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">100+</span>
+                                        <span class="stat-text">Simultaneous Tracks</span>
+                                    </div>
+                                    <div class="deploy-stat">
+                                        <span class="stat-number">0.1s</span>
+                                        <span class="stat-text">Threat Response</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">A.<span class="logo-highlight">T</span>.L.A.S</span>
+                    <p>Advanced Tactical Laser Aiming Shooter</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Gallery</h4>
+                    <ul>
+                        <li><a href="#demonstrations">Demonstrations</a></li>
+                        <li><a href="#3d-model">3D Model</a></li>
+                        <li><a href="#testing">Testing</a></li>
+                        <li><a href="#deployment">Deployment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html">Main Site</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 A.T.L.A.S Defense Systems. System Gallery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery-script.js"></script>
+    <script src="right-navbar.js"></script>
+</body>
+</html>

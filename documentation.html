@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.T.L.A.S Documentation - Technical Specifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="right-navbar.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">A.<span class="logo-highlight">T</span>.L.A.S</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#algorithm" class="nav-link">Algorithm</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#implementation" class="nav-link">Implementation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#calibration" class="nav-link">Calibration</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#performance" class="nav-link">Performance</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Header -->
+    <section class="doc-header">
+        <div class="container">
+            <h1 class="doc-title">
+                <span class="title-line">Technical Documentation</span>
+                <span class="title-subtitle">A.T.L.A.S Defense System</span>
+            </h1>
+            <p class="doc-description">
+                Comprehensive technical documentation for the Advanced Tactical Laser Aiming Shooter system, 
+                including algorithm details, implementation guidelines, and performance specifications.
+            </p>
+        </div>
+    </section>
+
+    <!-- Algorithm Section -->
+    <section id="algorithm" class="algorithm-section">
+        <div class="container">
+            <h2 class="section-title">Detection Algorithm</h2>
+            <div class="algorithm-content">
+                <div class="algorithm-flow">
+                    <div class="flow-step">
+                        <h3>1. YOLOv9 Detection Engine</h3>
+                        <div class="code-block">
+                            <pre><code>model = attempt_load(weights, map_location=device)
+stride = int(model.stride.max())
+imgsz = check_img_size(imgsz, s=stride)
+
+# Forward pass
+pred = model(img, augment=opt.augment)[0]
+pred = non_max_suppression(pred, opt.conf_thres, opt.iou_thres)</code></pre>
+                        </div>
+                        <p>Advanced neural network processes video frames at 33 FPS with 95%+ accuracy for human detection under varied environmental conditions.</p>
+                    </div>
+                    
+                    <div class="flow-step">
+                        <h3>2. Geometric Point Analysis</h3>
+                        <div class="code-block">
+                            <pre><code># Center point calculation
+center_x = (x1 + x2) / 2
+center_y = (y1 + y2) / 2
+
+# Upper reference point
+rect_height = y2 - y1
+upper_point_x = center_x
+upper_point_y = center_y - (rect_height / 4)</code></pre>
+                        </div>
+                        <p>Geometric analysis provides stable reference points for accurate targeting, with center point for torso targeting and upper point for chest/shoulder region.</p>
+                    </div>
+                    
+                    <div class="flow-step">
+                        <h3>3. SORT Tracking Integration</h3>
+                        <div class="code-block">
+                            <pre><code>sort_tracker = Sort(max_age=5, min_hits=2, iou_threshold=0.2)
+tracked_dets = sort_tracker.update(dets_to_sort)
+
+# Kalman filter prediction
+state_prediction = kalman_filter.predict()
+measurement_update = kalman_filter.update(detection)</code></pre>
+                        </div>
+                        <p>Multi-target tracking with Kalman filtering ensures smooth target following and prediction of target movement for precision engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section id="implementation" class="implementation-section">
+        <div class="container">
+            <h2 class="section-title">Hardware Implementation</h2>
+            <div class="implementation-grid">
+                <div class="impl-card">
+                    <h3>Platform Configuration</h3>
+                    <ul class="impl-list">
+                        <li><strong>Processing Unit:</strong> Raspberry Pi 5 ARM Cortex-A76</li>
+                        <li><strong>Memory:</strong> 8GB LPDDR4X-4267 SDRAM</li>
+                        <li><strong>Storage:</strong> 128GB microSD Class 10</li>
+                        <li><strong>Connectivity:</strong> WiFi 6, Bluetooth 5.0</li>
+                    </ul>
+                </div>
+                
+                <div class="impl-card">
+                    <h3>Servo Control System</h3>
+                    <ul class="impl-list">
+                        <li><strong>Motors:</strong> MG996R Digital Servo Motors</li>
+                        <li><strong>Controller:</strong> PCA9685 16-Channel PWM Driver</li>
+                        <li><strong>Precision:</strong> 0.1° positioning accuracy</li>
+                        <li><strong>Response:</strong> 180° rotation in 0.2 seconds</li>
+                    </ul>
+                </div>
+                
+                <div class="impl-card">
+                    <h3>Vision System</h3>
+                    <ul class="impl-list">
+                        <li><strong>Camera:</strong> Raspberry Pi Camera Module v3</li>
+                        <li><strong>Resolution:</strong> 12MP (4608×2592)</li>
+                        <li><strong>Frame Rate:</strong> 1080p@50fps, 720p@120fps</li>
+                        <li><strong>Night Vision:</strong> IR-sensitive CMOS sensor</li>
+                    </ul>
+                </div>
+                
+                <div class="impl-card">
+                    <h3>Targeting System</h3>
+                    <ul class="impl-list">
+                        <li><strong>Laser Module:</strong> 650nm Red Laser Pointer</li>
+                        <li><strong>Power Output:</strong> 5mW Class 3R</li>
+                        <li><strong>Beam Divergence:</strong> <2 mrad</li>
+                        <li><strong>Visibility Range:</strong> 1-20 meters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calibration Section -->
+    <section id="calibration" class="calibration-section">
+        <div class="container">
+            <h2 class="section-title">Calibration Protocol</h2>
+            <div class="calibration-steps">
+                <div class="calib-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Triple-Axis Alignment</h3>
+                        <p>Align camera view, laser dot, and gun barrel onto a single convergence plane to eliminate parallax errors and ensure accurate targeting.</p>
+                        <div class="calib-details">
+                            <strong>Procedure:</strong> Place target at 2m distance, adjust servo positions until laser dot matches camera crosshair center.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calib-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Dynamic Range Testing</h3>
+                        <p>Validate system accuracy across multiple distances (1m-5m) to create distance-based compensation profiles.</p>
+                        <div class="calib-details">
+                            <strong>Targets:</strong> Test with targets at 1m, 2m, 3m, 4m, and 5m distances. Record deviation patterns.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calib-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Adaptive Compensation</h3>
+                        <p>Program measured deviations into servo control system for automatic error correction based on target distance.</p>
+                        <div class="calib-details">
+                            <strong>Algorithm:</strong> Interpolate correction values between calibrated distances for real-time adjustment.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calib-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Stress Validation</h3>
+                        <p>Conduct 100+ continuous shots to verify no mechanical drift or accuracy degradation under sustained operation.</p>
+                        <div class="calib-details">
+                            <strong>Result:</strong> System maintains 95% hit consistency within ±5cm at 2m range after stress testing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="performance-section">
+        <div class="container">
+            <h2 class="section-title">Performance Metrics</h2>
+            <div class="performance-grid">
+                <div class="metric-card">
+                    <div class="metric-value">±5cm</div>
+                    <div class="metric-label">Targeting Accuracy</div>
+                    <div class="metric-desc">At 2 meter range</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">&lt;200ms</div>
+                    <div class="metric-label">Response Time</div>
+                    <div class="metric-desc">Lock to engagement</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">95%+</div>
+                    <div class="metric-label">Detection Rate</div>
+                    <div class="metric-desc">Human identification</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">33 FPS</div>
+                    <div class="metric-label">Processing Speed</div>
+                    <div class="metric-desc">Real-time analysis</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">1.6W</div>
+                    <div class="metric-label">Power Consumption</div>
+                    <div class="metric-desc">Idle state operation</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">100+</div>
+                    <div class="metric-label">Stress Cycles</div>
+                    <div class="metric-desc">Validated reliability</div>
+                </div>
+            </div>
+            
+            <div class="performance-chart">
+                <h3>System Performance Analysis</h3>
+                <div class="chart-container">
+                    <div class="chart-bars">
+                        <div class="chart-bar" data-value="95">
+                            <div class="bar-fill" style="height: 95%;"></div>
+                            <div class="bar-label">Accuracy</div>
+                        </div>
+                        <div class="chart-bar" data-value="88">
+                            <div class="bar-fill" style="height: 88%;"></div>
+                            <div class="bar-label">Speed</div>
+                        </div>
+                        <div class="chart-bar" data-value="92">
+                            <div class="bar-fill" style="height: 92%;"></div>
+                            <div class="bar-label">Reliability</div>
+                        </div>
+                        <div class="chart-bar" data-value="85">
+                            <div class="bar-fill" style="height: 85%;"></div>
+                            <div class="bar-label">Efficiency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">A.<span class="logo-highlight">T</span>.L.A.S</span>
+                    <p>Advanced Tactical Laser Aiming Shooter</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="#algorithm">Algorithm</a></li>
+                        <li><a href="#implementation">Implementation</a></li>
+                        <li><a href="#calibration">Calibration</a></li>
+                        <li><a href="#performance">Performance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html">Main Site</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Setup Guide</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 A.T.L.A.S Defense Systems. Technical Documentation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="right-navbar.js"></script>
+</body>
+</html>

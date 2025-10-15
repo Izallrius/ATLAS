@@ -1,0 +1,421 @@
+/* Documentation Page Additional Styles */
+
+.doc-header {
+    padding: 12rem 0 6rem;
+    background: linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%);
+    text-align: center;
+}
+
+.doc-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.doc-description {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Algorithm Section */
+.algorithm-section {
+    padding: 8rem 0;
+    background: #000000;
+}
+
+.algorithm-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.flow-step {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 15px;
+    border-left: 5px solid #980000;
+    transition: all 0.3s ease;
+}
+
+.flow-step:hover {
+    background: rgba(152, 0, 0, 0.08);
+    transform: translateX(10px);
+}
+
+.flow-step h3 {
+    color: #980000;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.code-block {
+    background: #111111;
+    border: 1px solid rgba(152, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.code-block code {
+    color: #FFFFFF;
+}
+
+.flow-step p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Implementation Section */
+.implementation-section {
+    padding: 8rem 0;
+    background: linear-gradient(180deg, #111111 0%, #000000 100%);
+}
+
+.implementation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.impl-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.impl-card:hover {
+    border-color: #980000;
+    box-shadow: 0 10px 30px rgba(152, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.impl-card h3 {
+    color: #980000;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.impl-list {
+    list-style: none;
+    padding: 0;
+}
+
+.impl-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(152, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.impl-list li:last-child {
+    border-bottom: none;
+}
+
+.impl-list strong {
+    color: #980000;
+    min-width: 120px;
+}
+
+/* Calibration Section */
+.calibration-section {
+    padding: 8rem 0;
+    background: #000000;
+}
+
+.calibration-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.calib-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.calib-step:hover {
+    background: rgba(152, 0, 0, 0.05);
+    border-color: #980000;
+}
+
+.step-number {
+    min-width: 80px;
+    height: 80px;
+    background: #980000;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    color: #980000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.calib-details {
+    background: rgba(152, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #980000;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.calib-details strong {
+    color: #980000;
+}
+
+/* Performance Section */
+.performance-section {
+    padding: 8rem 0;
+    background: linear-gradient(180deg, #111111 0%, #000000 100%);
+}
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    border-color: #980000;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(152, 0, 0, 0.3);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #980000;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(152, 0, 0, 0.5);
+}
+
+.metric-label {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.metric-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.performance-chart {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(152, 0, 0, 0.2);
+}
+
+.performance-chart h3 {
+    color: #980000;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+}
+
+.chart-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chart-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    gap: 2rem;
+}
+
+.chart-bar {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.bar-fill {
+    width: 40px;
+    background: linear-gradient(to top, #980000, #ff4444);
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    transition: all 0.3s ease;
+    animation: barGrow 2s ease-out;
+}
+
+.bar-fill:hover {
+    background: linear-gradient(to top, #b30000, #ff6666);
+    transform: scaleY(1.1);
+}
+
+.bar-label {
+    margin-top: 1rem;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: center;
+}
+
+@keyframes barGrow {
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--bar-height, 0);
+    }
+}
+
+/* Responsive Design for Documentation */
+@media (max-width: 768px) {
+    .doc-title {
+        font-size: 2.5rem;
+    }
+    
+    .doc-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .algorithm-flow {
+        gap: 2rem;
+    }
+    
+    .flow-step {
+        padding: 2rem;
+    }
+    
+    .flow-step h3 {
+        font-size: 1.5rem;
+    }
+    
+    .implementation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calibration-steps {
+        gap: 2rem;
+    }
+    
+    .calib-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin: 0 auto 1rem;
+    }
+    
+    .performance-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .metric-card {
+        padding: 1.5rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .chart-bars {
+        gap: 1rem;
+    }
+    
+    .bar-fill {
+        width: 30px;
+    }
+}
+
+/* Code syntax highlighting */
+.code-block code .keyword {
+    color: #ff6b6b;
+}
+
+.code-block code .string {
+    color: #4ecdc4;
+}
+
+.code-block code .comment {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+.code-block code .number {
+    color: #f39c12;
+}
+
+.code-block code .function {
+    color: #3498db;
+}
+
+/* Enhanced scroll animations for documentation */
+.flow-step,
+.impl-card,
+.calib-step,
+.metric-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.flow-step.visible,
+.impl-card.visible,
+.calib-step.visible,
+.metric-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
