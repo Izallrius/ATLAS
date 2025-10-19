@@ -1,0 +1,166 @@
+/* Additional Mobile Bubble Navigation Styles */
+
+/* Prevent body scroll when mobile nav is open */
+body.mobile-nav-open {
+    overflow: hidden;
+}
+
+/* Mobile bubble navbar hover effects */
+@media (max-width: 480px) {
+    .right-navbar.mobile-expanded .nav-item-right:hover {
+        background: rgba(152, 0, 0, 0.2);
+        transform: translateX(-5px);
+        color: #ffffff;
+    }
+    
+    .right-navbar.mobile-expanded .nav-item-right:active {
+        background: rgba(152, 0, 0, 0.4);
+        transform: scale(0.98);
+    }
+    
+    /* Backdrop for expanded state */
+    .right-navbar.mobile-expanded::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+        opacity: 0;
+        animation: fadeIn 0.3s ease forwards;
+        pointer-events: none;
+    }
+    
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+    
+    /* Smooth bubble transition */
+    .right-navbar {
+        transform-origin: bottom right;
+    }
+    
+    .right-navbar.mobile-expanded {
+        transform: scale(1);
+        animation: bubbleExpand 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    @keyframes bubbleExpand {
+        0% {
+            transform: scale(0.3);
+            opacity: 0.7;
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .right-navbar.mobile-expanded .nav-item-right:hover {
+        background: rgba(152, 0, 0, 0.2);
+        transform: translateX(-5px);
+        color: #ffffff;
+    }
+    
+    .right-navbar.mobile-expanded .nav-item-right:active {
+        background: rgba(152, 0, 0, 0.4);
+        transform: scale(0.98);
+    }
+    
+    /* Tablet backdrop */
+    .right-navbar.mobile-expanded::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+        opacity: 0;
+        animation: fadeIn 0.3s ease forwards;
+        pointer-events: none;
+    }
+    
+    .right-navbar.mobile-expanded {
+        animation: bubbleExpand 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+/* Loading state for nav items */
+.nav-item-right.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.nav-item-right.loading::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Accessibility improvements */
+.mobile-nav-toggle:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.mobile-nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .mobile-nav-toggle {
+        border: 2px solid #ffffff;
+    }
+    
+    .right-navbar.mobile-expanded .nav-item-right {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .right-navbar,
+    .right-navbar.mobile-expanded,
+    .mobile-toggle-icon span,
+    .nav-item-right {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    .right-navbar.mobile-expanded .nav-item-right {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* RTL support */
+[dir="rtl"] .right-navbar {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .right-navbar.mobile-expanded {
+    transform-origin: bottom left;
+}
+
+[dir="rtl"] .right-navbar.mobile-expanded .nav-item-right:hover {
+    transform: translateX(5px);
+}

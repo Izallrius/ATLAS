@@ -2,45 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>A.T.L.A.S Gallery - System Demonstrations</title>
     <link rel="stylesheet" href="style/styles.css">
     <link rel="stylesheet" href="style/animations.css">
     <link rel="stylesheet" href="style/gallery-styles.css">
     <link rel="stylesheet" href="style/right-navbar.css">
+    <link rel="stylesheet" href="style/mobile-optimizations.css">
+    <link rel="stylesheet" href="style/mobile-fixes.css">
+    <link rel="stylesheet" href="style/desktop-navbar-fix.css">
+    <link rel="stylesheet" href="style/mobile-bubble-additional.css">
 </head>
 <body>
-        <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <span class="logo-text">A.<span class="logo-highlight">T</span>.L.A.S</span>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#demonstrations" class="nav-link">Demonstrations</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#3d-model" class="nav-link">3D Model</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testing" class="nav-link">Testing</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#deployment" class="nav-link">Deployment</a>
-                </li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
-
     <!-- Gallery Header -->
     <section class="gallery-header">
         <div class="container">
@@ -511,8 +495,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="gallery-script.js"></script>
-    <script src="right-navbar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/gallery-script.js"></script>
+    <script src="js/right-navbar.js"></script>
+    <script src="js/mobile-enhancements.js"></script>
 </body>
 </html>

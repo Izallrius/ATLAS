@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.T.L.A.S - Advanced Tactical Laser Aiming Shooter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>A.T.L.A.S - Area Tactical Level Autonomous Sentinel | YOLOv11 Defense System</title>
     <link rel="stylesheet" href="style/styles.css">
     <link rel="stylesheet" href="style/animations.css">
     <link rel="stylesheet" href="style/right-navbar.css">
+    <link rel="stylesheet" href="style/mobile-optimizations.css">
+    <link rel="stylesheet" href="style/mobile-fixes.css">
+    <link rel="stylesheet" href="style/desktop-navbar-fix.css">
+    <link rel="stylesheet" href="style/mobile-bubble-additional.css">
+    <link rel="stylesheet" href="style/pose-detection.css">
+    <link rel="stylesheet" href="style/advanced-animations.css">
+    <link rel="stylesheet" href="style/simulation.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -15,30 +25,8 @@
             <div class="nav-logo">
                 <span class="logo-text">A.<span class="logo-highlight">T</span>.L.A.S</span>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#technology" class="nav-link">Technology</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#features" class="nav-link">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#specifications" class="nav-link">Specifications</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
-    </nav>
+    </nav> 
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -46,11 +34,11 @@
             <div class="hero-text">
                 <h1 class="hero-title">
                     <span class="title-line">A.<span class="highlight">T</span>.L.A.S</span>
-                    <span class="title-subtitle">Advanced Tactical Laser Aiming Shooter</span>
+                    <span class="title-subtitle">Area Tactical Level Autonomous Sentinel</span>
                 </h1>
                 <p class="hero-description">
-                    Next-generation autonomous defense system combining real-time human detection, 
-                    precision tracking, and laser-guided targeting for ultimate battlefield superiority.
+                Area Tactical Level Autonomous Sentinel - A revolutionary defense system combining radar detection, 
+                YOLOv11 pose estimation, and precision targeting for comprehensive threat neutralization in a 20+ meter radius.
                 </p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary">Explore Technology</button>
@@ -60,7 +48,7 @@
             <div class="hero-visual">
                 <div class="rotating-system">
                     <div class="system-core"></div>
-                    <div class="radar-sweep"></div>
+                    <div class="radar-sweep2"></div>
                     <div class="targeting-grid">
                         <div class="grid-line horizontal"></div>
                         <div class="grid-line vertical"></div>
@@ -84,29 +72,29 @@
                     <div class="tech-icon">
                         <div class="detection-icon"></div>
                     </div>
-                    <h3>YOLOv9 Detection</h3>
-                    <p>Advanced neural network for real-time human detection with 95%+ accuracy under varied conditions.</p>
+                    <h3>YOLOv11 Pose Detection</h3>
+                    <p>Next-generation neural network with pose estimation for precise human detection and skeletal tracking with 98%+ accuracy.</p>
                 </div>
                 <div class="tech-card" data-aos="fade-up" data-delay="200">
                     <div class="tech-icon">
                         <div class="tracking-icon"></div>
                     </div>
-                    <h3>SORT Tracking</h3>
-                    <p>Multi-target tracking algorithm with Kalman filtering for smooth and precise target following.</p>
+                    <h3>Skeletal Tracking</h3>
+                    <p>Advanced pose estimation system that tracks 17 key body points for enhanced target identification and precision aiming.</p>
                 </div>
                 <div class="tech-card" data-aos="fade-up" data-delay="300">
                     <div class="tech-icon">
                         <div class="precision-icon"></div>
                     </div>
-                    <h3>Precision Aiming</h3>
-                    <p>Servo-controlled system achieving ±5cm accuracy at 2 meters with geometric point analysis.</p>
+                    <h3>Shoulder-Point Targeting</h3>
+                    <p>Intelligent targeting system that calculates center point between shoulders with crosshair precision for optimal engagement accuracy.</p>
                 </div>
                 <div class="tech-card" data-aos="fade-up" data-delay="400">
                     <div class="tech-icon">
                         <div class="laser-icon"></div>
                     </div>
-                    <h3>Laser Targeting</h3>
-                    <p>Smart engagement protocol with 2+ second lock confirmation and controlled burst firing.</p>
+                    <h3>Radar Integration</h3>
+                    <p>Radio wave detection system for wide-area surveillance combined with visual confirmation for 360° threat assessment.</p>
                 </div>
             </div>
         </div>
@@ -122,8 +110,8 @@
                         <span class="step-number">1</span>
                     </div>
                     <div class="step-content">
-                        <h4>Detection</h4>
-                        <p>YOLOv9 identifies human targets</p>
+                        <h4>Radar Detection</h4>
+                        <p>Radio waves scan 20m+ radius for movement</p>
                     </div>
                 </div>
                 <div class="workflow-arrow"></div>
@@ -132,8 +120,8 @@
                         <span class="step-number">2</span>
                     </div>
                     <div class="step-content">
-                        <h4>Tracking</h4>
-                        <p>SORT algorithm maintains target lock</p>
+                        <h4>Visual Confirmation</h4>
+                        <p>YOLOv11 pose detection identifies targets</p>
                     </div>
                 </div>
                 <div class="workflow-arrow"></div>
@@ -142,8 +130,8 @@
                         <span class="step-number">3</span>
                     </div>
                     <div class="step-content">
-                        <h4>Aiming</h4>
-                        <p>Servo motors position with precision</p>
+                        <h4>Shoulder Targeting</h4>
+                        <p>Center point calculation between shoulders</p>
                     </div>
                 </div>
                 <div class="workflow-arrow"></div>
@@ -152,8 +140,998 @@
                         <span class="step-number">4</span>
                     </div>
                     <div class="step-content">
+                        <h4>Aiming</h4>
+                        <p>Servo motors position with precision</p>
+                    </div>
+                </div>
+                <div class="workflow-arrow"></div>
+                <div class="workflow-step" data-step="5">
+                    <div class="step-circle">
+                        <span class="step-number">5</span>
+                    </div>
+                    <div class="step-content">
                         <h4>Engagement</h4>
                         <p>Laser activation with safety protocols</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Radar Technology Section -->
+    <section id="radar" class="radar-tech-section">
+        <div class="container">
+            <h2 class="section-title">Radar Detection Technology</h2>
+            <div class="radar-container">
+                <div class="radar-visual">
+                    <div class="radar-display">
+                        <div class="radar-screen">
+                            <div class="radar-sweep-arm"></div>
+                            <div class="radar-grid">
+                                <div class="grid-circle" style="width: 80px; height: 80px;"></div>
+                                <div class="grid-circle" style="width: 160px; height: 160px;"></div>
+                                <div class="grid-circle" style="width: 240px; height: 240px;"></div>
+                                <div class="grid-circle" style="width: 320px; height: 320px;"></div>
+                                <div class="grid-line-h"></div>
+                                <div class="grid-line-v"></div>
+                            </div>
+                            <div class="radar-blip" style="top: 30%; left: 40%;"></div>
+                            <div class="radar-blip" style="top: 60%; left: 70%;"></div>
+                            <div class="radar-blip target-blip" style="top: 45%; left: 55%;"></div>
+                        </div>
+                        <div class="radar-info">
+                            <div class="range-indicator">
+                                <span class="range-label">RANGE: 20m+</span>
+                                <div class="range-bar">
+                                    <div class="range-fill"></div>
+                                </div>
+                            </div>
+                            <div class="detection-count">
+                                <span class="count-label">TARGETS: 3</span>
+                                <div class="target-list">
+                                    <div class="target-item">▶ Contact 1: 15m NE</div>
+                                    <div class="target-item">▶ Contact 2: 18m SE</div>
+                                    <div class="target-item active">▶ TARGET: 12m E</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="radar-specs">
+                    <h3>Radio Wave Detection System</h3>
+                    <div class="radar-features">
+                        <div class="radar-feature">
+                            <div class="feature-icon">📡</div>
+                            <h4>360° Coverage</h4>
+                            <p>Complete perimeter scanning with no blind spots for comprehensive threat detection</p>
+                        </div>
+                        <div class="radar-feature">
+                            <div class="feature-icon">🌊</div>
+                            <h4>Radio Wave Technology</h4>
+                            <p>Advanced radio frequency detection capable of penetrating light cover and vegetation</p>
+                        </div>
+                        <div class="radar-feature">
+                            <div class="feature-icon">⚡</div>
+                            <h4>Real-Time Processing</h4>
+                            <p>Instant movement detection with immediate camera system coordination</p>
+                        </div>
+                        <div class="radar-feature">
+                            <div class="feature-icon">🎯</div>
+                            <h4>Target Prioritization</h4>
+                            <p>Intelligent threat assessment with automatic camera direction and engagement queuing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-technical">
+                        <h4>Technical Specifications</h4>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <span class="tech-label">Detection Range</span>
+                                <span class="tech-value">20+ meters</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Scan Rate</span>
+                                <span class="tech-value">10 Hz</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Coverage</span>
+                                <span class="tech-value">360°</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Penetration</span>
+                                <span class="tech-value">Light Cover</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Response Time</span>
+                                <span class="tech-value">&lt;100ms</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Power Usage</span>
+                                <span class="tech-value">0.8W</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="integration-flow">
+                        <h4>Integration Workflow</h4>
+                        <div class="flow-steps">
+                            <div class="flow-step">
+                                <div class="step-number">1</div>
+                                <span>Radar detects movement</span>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-number">2</div>
+                                <span>Calculate direction vector</span>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-number">3</div>
+                                <span>Direct camera system</span>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-number">4</div>
+                                <span>Initiate visual confirmation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pose Detection Visualization -->
+    <section id="pose-detection" class="pose-detection-section">
+        <div class="container">
+            <h2 class="section-title">YOLOv11 Pose Detection System</h2>
+            <div class="pose-visual-container">
+                <div class="pose-diagram">
+                    <div class="human-skeleton">
+                        <!-- Shoulders - Target Points -->
+                        <div class="keypoint target-point" data-point="5" style="top: 25%; left: 40%;">
+                            <div class="point-indicator target"></div>
+                            <span class="point-label target">L Shoulder</span>
+                        </div>
+                        <div class="keypoint target-point" data-point="6" style="top: 25%; left: 60%;">
+                            <div class="point-indicator target"></div>
+                            <span class="point-label target">R Shoulder</span>
+                        </div>
+                        <!-- Center Target -->
+                        <div class="center-target" style="top: 25%; left: 50%;">
+                            <div class="crosshair-target">
+                                <div class="crosshair-h"></div>
+                                <div class="crosshair-v"></div>
+                                <div class="target-circle"></div>
+                            </div>
+                            <span class="target-label">TARGET CENTER</span>
+                        </div>
+                        <!-- Other keypoints -->
+                        <div class="keypoint" data-point="0" style="top: 10%; left: 50%;">
+                            <div class="point-indicator"></div>
+                            <span class="point-label">Nose</span>
+                        </div>
+                        <div class="keypoint" data-point="7" style="top: 35%; left: 35%;">
+                            <div class="point-indicator"></div>
+                            <span class="point-label">L Elbow</span>
+                        </div>
+                        <div class="keypoint" data-point="8" style="top: 35%; left: 65%;">
+                            <div class="point-indicator"></div>
+                            <span class="point-label">R Elbow</span>
+                        </div>
+                        <div class="keypoint" data-point="11" style="top: 55%; left: 45%;">
+                            <div class="point-indicator"></div>
+                            <span class="point-label">L Hip</span>
+                        </div>
+                        <div class="keypoint" data-point="12" style="top: 55%; left: 55%;">
+                            <div class="point-indicator"></div>
+                            <span class="point-label">R Hip</span>
+                        </div>
+                        <div class="keypoint" data-point="13" style="top: 70%; left: 42%;">
+                            <div class="point-indicator"></div>
+                            <span class="point-label">L Knee</span>
+                        </div>
+                        <div class="keypoint" data-point="14" style="top: 70%; left: 58%;">
+                            <div class="point-indicator"></div>
+                            <span class="point-label">R Knee</span>
+                        </div>
+                        <!-- Skeleton Lines -->
+                        <svg class="skeleton-lines" viewBox="0 0 100 100">
+                            <line x1="40" y1="25" x2="60" y2="25" class="bone-line target-line"/>
+                            <line x1="40" y1="25" x2="45" y2="55" class="bone-line"/>
+                            <line x1="60" y1="25" x2="55" y2="55" class="bone-line"/>
+                            <line x1="45" y1="55" x2="55" y2="55" class="bone-line"/>
+                            <line x1="40" y1="25" x2="35" y2="35" class="bone-line"/>
+                            <line x1="60" y1="25" x2="65" y2="35" class="bone-line"/>
+                            <line x1="45" y1="55" x2="42" y2="70" class="bone-line"/>
+                            <line x1="55" y1="55" x2="58" y2="70" class="bone-line"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="pose-info">
+                    <h3>17-Point Skeletal Detection</h3>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h4>Detection Accuracy</h4>
+                            <div class="stat-number">98.5%</div>
+                            <p>Real-time pose estimation accuracy</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Processing Speed</h4>
+                            <div class="stat-number">30 FPS</div>
+                            <p>Frames processed per second</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Target Precision</h4>
+                            <div class="stat-number">±2cm</div>
+                            <p>Shoulder center calculation accuracy</p>
+                        </div>
+                    </div>
+                    <div class="algorithm-code">
+                        <h4>Target Calculation Algorithm</h4>
+                        <pre><code># Calculate center point between shoulders
+cx = int((shoulder_left_x + shoulder_right_x) / 2)
+cy = int((shoulder_left_y + shoulder_right_y) / 2)
+
+# Draw targeting crosshair
+cv2.circle(frame, (cx, cy), 30, (0, 0, 137), 2)
+cv2.line(frame, (cx-30, cy), (cx+30, cy), (0, 0, 137), 1)
+cv2.line(frame, (cx, cy-30), (cx, cy+30), (0, 0, 137), 1)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section id="system-architecture" class="system-architecture-section">
+        <div class="container">
+            <h2 class="section-title">Complete System Architecture</h2>
+            <div class="architecture-container">
+                <div class="architecture-diagram">
+                    <div class="system-overview">
+                        <div class="component-node radar-node" data-component="radar">
+                            <div class="node-icon">📡</div>
+                            <h4>Radar Detection</h4>
+                            <p>20m+ radius scanning</p>
+                        </div>
+                        <div class="component-node camera-node" data-component="camera">
+                            <div class="node-icon">📹</div>
+                            <h4>Camera System</h4>
+                            <p>30 FPS processing</p>
+                        </div>
+                        <div class="component-node ai-node" data-component="ai">
+                            <div class="node-icon">🧠</div>
+                            <h4>YOLOv11 AI</h4>
+                            <p>Pose detection</p>
+                        </div>
+                        <div class="component-node targeting-node" data-component="targeting">
+                            <div class="node-icon">🎯</div>
+                            <h4>Targeting</h4>
+                            <p>Shoulder center calc</p>
+                        </div>
+                        <div class="component-node servo-node" data-component="servo">
+                            <div class="node-icon">⚙️</div>
+                            <h4>Servo Control</h4>
+                            <p>Precision positioning</p>
+                        </div>
+                        <div class="component-node weapon-node" data-component="weapon">
+                            <div class="node-icon">⚡</div>
+                            <h4>Engagement</h4>
+                            <p>Controlled firing</p>
+                        </div>
+                        
+                        <!-- Connection Lines -->
+                        <svg class="connection-lines" viewBox="0 0 800 600">
+                            <defs>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                                        refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#980000" />
+                                </marker>
+                            </defs>
+                            
+                            <!-- Radar to Camera -->
+                            <path d="M 140 80 Q 400 60 660 80" stroke="#980000" stroke-width="3" 
+                                  fill="none" marker-end="url(#arrowhead)" class="data-flow-line">
+                                <animate attributeName="stroke-dasharray" values="0,20;20,0;0,20" 
+                                         dur="3s" repeatCount="indefinite"/>
+                            </path>
+                            
+                            <!-- Camera to AI -->
+                            <path d="M 580 120 Q 500 150 400 220" stroke="#980000" stroke-width="3" 
+                                  fill="none" marker-end="url(#arrowhead)" class="data-flow-line">
+                                <animate attributeName="stroke-dasharray" values="0,20;20,0;0,20" 
+                                         dur="3s" repeatCount="indefinite" begin="0.5s"/>
+                            </path>
+                            
+                            <!-- AI to Targeting -->
+                            <path d="M 350 280 Q 500 280 540 280" stroke="#980000" stroke-width="3" 
+                                  fill="none" marker-end="url(#arrowhead)" class="data-flow-line">
+                                <animate attributeName="stroke-dasharray" values="0,20;20,0;0,20" 
+                                         dur="3s" repeatCount="indefinite" begin="1s"/>
+                            </path>
+                            
+                            <!-- Targeting to Servo -->
+                            <path d="M 640 360 Q 700 340 680 430" stroke="#980000" stroke-width="3" 
+                                  fill="none" marker-end="url(#arrowhead)" class="data-flow-line">
+                                <animate attributeName="stroke-dasharray" values="0,20;20,0;0,20" 
+                                         dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                            </path>
+                            
+                            <!-- Servo to Weapon -->
+                            <path d="M 640 540 Q 400 560 140 540" stroke="#980000" stroke-width="3" 
+                                  fill="none" marker-end="url(#arrowhead)" class="data-flow-line">
+                                <animate attributeName="stroke-dasharray" values="0,20;20,0;0,20" 
+                                         dur="3s" repeatCount="indefinite" begin="2s"/>
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="system-stats">
+                    <h3>System Performance</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon">⚡</div>
+                            <div class="stat-value">200ms</div>
+                            <div class="stat-label">Response Time</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🎯</div>
+                            <div class="stat-value">±2cm</div>
+                            <div class="stat-label">Targeting Precision</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-value">98.5%</div>
+                            <div class="stat-label">Detection Accuracy</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🔄</div>
+                            <div class="stat-value">30 FPS</div>
+                            <div class="stat-label">Processing Speed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">📡</div>
+                            <div class="stat-value">20m+</div>
+                            <div class="stat-label">Detection Range</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🔒</div>
+                            <div class="stat-value">5-Layer</div>
+                            <div class="stat-label">Safety Protocol</div>
+                        </div>
+                    </div>
+                    
+                    <div class="technical-specs">
+                        <h4>Technical Specifications</h4>
+                        <ul>
+                            <li><strong>AI Model:</strong> YOLOv11 with pose estimation</li>
+                            <li><strong>Keypoints:</strong> 17-point skeletal tracking</li>
+                            <li><strong>Target Area:</strong> Shoulder center calculation</li>
+                            <li><strong>Radar Range:</strong> 20+ meter radius coverage</li>
+                            <li><strong>Processing:</strong> Real-time edge computing</li>
+                            <li><strong>Safety:</strong> Multi-layer confirmation system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-Time Simulation -->
+    <section id="simulation" class="simulation-section">
+        <div class="container">
+            <h2 class="section-title">Live System Simulation</h2>
+            <div class="simulation-container">
+                <div class="simulation-display">
+                    <div class="simulation-screen">
+                        <div class="radar-overlay">
+                            <div class="radar-sweep"></div>
+                            <div class="radar-grid">
+                                <div class="grid-ring" style="width: 100px; height: 100px;"></div>
+                                <div class="grid-ring" style="width: 200px; height: 200px;"></div>
+                                <div class="grid-ring" style="width: 300px; height: 300px;"></div>
+                            </div>
+                            <div class="detection-blip" style="top: 30%; left: 60%;"></div>
+                            <div class="detection-blip" style="top: 70%; left: 25%;"></div>
+                        </div>
+                        
+                        <div class="camera-view">
+                            <div class="camera-overlay">
+                                <div class="hud-element top-left">
+                                    <div class="status-indicator active"></div>
+                                    <span>YOLO11 ACTIVE</span>
+                                </div>
+                                <div class="hud-element top-right">
+                                    <span>FPS: <span class="fps-counter">30</span></span>
+                                </div>
+                                <div class="hud-element bottom-left">
+                                    <span>TARGETS: <span class="target-counter">2</span></span>
+                                </div>
+                                <div class="hud-element bottom-right">
+                                    <span>RANGE: <span class="range-display">15.2m</span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="target-box" style="top: 25%; left: 40%; width: 120px; height: 200px;">
+                                <div class="target-label">TARGET 1</div>
+                                <div class="confidence-bar">
+                                    <div class="confidence-fill" style="width: 96%;"></div>
+                                    <span class="confidence-text">96%</span>
+                                </div>
+                                <div class="shoulder-points">
+                                    <div class="shoulder-point left" style="top: 15%; left: 20%;"></div>
+                                    <div class="shoulder-point right" style="top: 15%; right: 20%;"></div>
+                                    <div class="target-crosshair" style="top: 15%; left: 50%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="target-box" style="top: 40%; right: 25%; width: 100px; height: 180px;">
+                                <div class="target-label">TARGET 2</div>
+                                <div class="confidence-bar">
+                                    <div class="confidence-fill" style="width: 89%;"></div>
+                                    <span class="confidence-text">89%</span>
+                                </div>
+                                <div class="shoulder-points">
+                                    <div class="shoulder-point left" style="top: 18%; left: 25%;"></div>
+                                    <div class="shoulder-point right" style="top: 18%; right: 25%;"></div>
+                                    <div class="target-crosshair" style="top: 18%; left: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulation-controls">
+                    <div class="control-panel">
+                        <h3>System Status</h3>
+                        <div class="status-grid">
+                            <div class="status-item">
+                                <div class="status-light active"></div>
+                                <span>Radar System</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-light active"></div>
+                                <span>Camera Feed</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-light active"></div>
+                                <span>YOLOv11 Engine</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-light warning"></div>
+                                <span>Targeting System</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-light active"></div>
+                                <span>Servo Motors</span>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-light standby"></div>
+                                <span>Weapon System</span>
+                            </div>
+                        </div>
+                        
+                        <div class="engagement-protocol">
+                            <h4>Engagement Protocol</h4>
+                            <div class="protocol-steps">
+                                <div class="protocol-step completed">
+                                    <div class="step-indicator">✓</div>
+                                    <span>Target Detected</span>
+                                </div>
+                                <div class="protocol-step completed">
+                                    <div class="step-indicator">✓</div>
+                                    <span>Pose Confirmed</span>
+                                </div>
+                                <div class="protocol-step active">
+                                    <div class="step-indicator">⚡</div>
+                                    <span>Calculating Trajectory</span>
+                                </div>
+                                <div class="protocol-step pending">
+                                    <div class="step-indicator">⏳</div>
+                                    <span>Safety Check</span>
+                                </div>
+                                <div class="protocol-step pending">
+                                    <div class="step-indicator">🎯</div>
+                                    <span>Engagement Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="telemetry-data">
+                            <h4>Live Telemetry</h4>
+                            <div class="telemetry-items">
+                                <div class="telemetry-item">
+                                    <span class="telem-label">Processing Latency:</span>
+                                    <span class="telem-value">12ms</span>
+                                </div>
+                                <div class="telemetry-item">
+                                    <span class="telem-label">Detection Range:</span>
+                                    <span class="telem-value">23.4m</span>
+                                </div>
+                                <div class="telemetry-item">
+                                    <span class="telem-label">Servo Position:</span>
+                                    <span class="telem-value">Az: 045° El: +12°</span>
+                                </div>
+                                <div class="telemetry-item">
+                                    <span class="telem-label">Power Consumption:</span>
+                                    <span class="telem-value">24.7W</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Algorithm Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">YOLOv9 → YOLOv11 Enhancement</h2>
+            <div class="comparison-container">
+                <div class="version-comparison">
+                    <div class="version-card old-version">
+                        <div class="version-header">
+                            <h3>Previous: YOLOv9</h3>
+                            <div class="version-badge legacy">Legacy</div>
+                        </div>
+                        <div class="version-content">
+                            <div class="capability-list">
+                                <div class="capability">
+                                    <div class="capability-icon">🔍</div>
+                                    <div class="capability-info">
+                                        <h4>Basic Detection</h4>
+                                        <p>Human detection with bounding boxes</p>
+                                        <div class="metric">95% accuracy</div>
+                                    </div>
+                                </div>
+                                <div class="capability">
+                                    <div class="capability-icon">📦</div>
+                                    <div class="capability-info">
+                                        <h4>Rectangle Targeting</h4>
+                                        <p>Center point of detection box</p>
+                                        <div class="metric">±10cm precision</div>
+                                    </div>
+                                </div>
+                                <div class="capability">
+                                    <div class="capability-icon">⚙️</div>
+                                    <div class="capability-info">
+                                        <h4>Simple Tracking</h4>
+                                        <p>SORT algorithm implementation</p>
+                                        <div class="metric">25 FPS processing</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="algorithm-preview">
+                                <h4>Detection Code</h4>
+                                <pre><code># YOLOv9 Basic Detection
+results = model(frame)
+for det in results.xyxy[0]:
+    x1, y1, x2, y2 = det[:4]
+    center_x = (x1 + x2) / 2
+    center_y = (y1 + y2) / 2</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="upgrade-arrow">
+                        <div class="arrow-container">
+                            <div class="arrow-shaft"></div>
+                            <div class="arrow-head"></div>
+                            <div class="upgrade-text">ENHANCED</div>
+                        </div>
+                    </div>
+                    
+                    <div class="version-card new-version">
+                        <div class="version-header">
+                            <h3>Current: YOLOv11</h3>
+                            <div class="version-badge current">Active</div>
+                        </div>
+                        <div class="version-content">
+                            <div class="capability-list">
+                                <div class="capability">
+                                    <div class="capability-icon">🧠</div>
+                                    <div class="capability-info">
+                                        <h4>Pose Detection</h4>
+                                        <p>17-point skeletal tracking</p>
+                                        <div class="metric">98.5% accuracy</div>
+                                    </div>
+                                </div>
+                                <div class="capability">
+                                    <div class="capability-icon">🎯</div>
+                                    <div class="capability-info">
+                                        <h4>Shoulder Targeting</h4>
+                                        <p>Center point between shoulders</p>
+                                        <div class="metric">±2cm precision</div>
+                                    </div>
+                                </div>
+                                <div class="capability">
+                                    <div class="capability-icon">⚡</div>
+                                    <div class="capability-info">
+                                        <h4>Advanced Processing</h4>
+                                        <p>Real-time pose estimation</p>
+                                        <div class="metric">30 FPS processing</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="algorithm-preview">
+                                <h4>Enhanced Code</h4>
+                                <pre><code># YOLOv11 Pose Detection
+results = model(frame)
+for result in results:
+    keypoints = result.keypoints.xy
+    for person_kpts in keypoints:
+        # Extract shoulders (points 5,6)
+        x5, y5 = person_kpts[5]
+        x6, y6 = person_kpts[6]
+        cx = int((x5 + x6) / 2)
+        cy = int((y5 + y6) / 2)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="improvement-metrics">
+                    <h3>Performance Improvements</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon">🎯</div>
+                            <div class="metric-value">5x</div>
+                            <div class="metric-label">Better Precision</div>
+                            <div class="metric-detail">From ±10cm to ±2cm targeting accuracy</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">📈</div>
+                            <div class="metric-value">+3.5%</div>
+                            <div class="metric-label">Higher Accuracy</div>
+                            <div class="metric-detail">Improved from 95% to 98.5% detection rate</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">⚡</div>
+                            <div class="metric-value">+20%</div>
+                            <div class="metric-label">Faster Processing</div>
+                            <div class="metric-detail">Increased from 25 FPS to 30 FPS</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">🔬</div>
+                            <div class="metric-value">17</div>
+                            <div class="metric-label">Keypoints</div>
+                            <div class="metric-detail">Full skeletal tracking vs basic detection</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="interactive-demo-section">
+        <div class="container">
+            <h2 class="section-title">Live System Demonstration</h2>
+            <div class="demo-container">
+                <div class="demo-left">
+                    <div class="system-status-panel holographic">
+                        <h3>System Status</h3>
+                        <div class="status-grid">
+                            <div class="status-item">
+                                <div class="status-indicator">
+                                    <div class="status-light online"></div>
+                                    <span>Radar Online</span>
+                                </div>
+                                <div class="data-stream"></div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-indicator">
+                                    <div class="status-light processing"></div>
+                                    <span>YOLOv11 Processing</span>
+                                </div>
+                                <div class="data-stream"></div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-indicator">
+                                    <div class="status-light targeting"></div>
+                                    <span>Targeting Active</span>
+                                </div>
+                                <div class="data-stream"></div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-indicator">
+                                    <div class="status-light online"></div>
+                                    <span>Servo Control</span>
+                                </div>
+                                <div class="data-stream"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="system-metrics">
+                            <h4>Real-time Metrics</h4>
+                            <div class="metric-row">
+                                <span class="metric-label">Detection Range:</span>
+                                <span class="metric-value">20.5m</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Processing FPS:</span>
+                                <span class="metric-value">29.8</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Targeting Accuracy:</span>
+                                <span class="metric-value">98.7%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Response Time:</span>
+                                <span class="metric-value">185ms</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="targeting-display">
+                        <h4>Targeting System</h4>
+                        <div class="targeting-reticle">
+                            <div class="reticle-ring"></div>
+                            <div class="reticle-ring"></div>
+                            <div class="reticle-ring"></div>
+                            <div class="reticle-crosshair"></div>
+                            <div class="reticle-center"></div>
+                        </div>
+                        <div class="target-info">
+                            <div class="target-coord">X: 1024 | Y: 768</div>
+                            <div class="target-distance">Distance: 15.2m</div>
+                            <div class="target-confidence">Confidence: 96.8%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-right">
+                    <div class="radar-display">
+                        <h3>Radar Surveillance</h3>
+                        <div class="radar-container">
+                            <div class="radar-sweep detection-pulse">
+                                <div class="radar-grid">
+                                    <div class="grid-circle" style="width: 40px; height: 40px;"></div>
+                                    <div class="grid-circle" style="width: 80px; height: 80px;"></div>
+                                    <div class="grid-circle" style="width: 120px; height: 120px;"></div>
+                                    <div class="grid-circle" style="width: 160px; height: 160px;"></div>
+                                    <div class="grid-line horizontal"></div>
+                                    <div class="grid-line vertical"></div>
+                                </div>
+                                <!-- Detected targets -->
+                                <div class="radar-target" style="top: 30%; left: 60%;" data-distance="12m">
+                                    <div class="target-blip"></div>
+                                    <div class="target-label">TARGET 1</div>
+                                </div>
+                                <div class="radar-target" style="top: 70%; left: 40%;" data-distance="18m">
+                                    <div class="target-blip"></div>
+                                    <div class="target-label">TARGET 2</div>
+                                </div>
+                            </div>
+                            <div class="radar-info">
+                                <div class="range-indicator">
+                                    <span>5m</span>
+                                    <span>10m</span>
+                                    <span>15m</span>
+                                    <span>20m</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="algorithm-monitor">
+                        <h4>YOLOv11 Algorithm Monitor</h4>
+                        <div class="algorithm-status">
+                            <div class="processing-step active">
+                                <div class="step-icon">📡</div>
+                                <span>Input Acquisition</span>
+                                <div class="loading-sequence">
+                                    <div class="loading-dot"></div>
+                                    <div class="loading-dot"></div>
+                                    <div class="loading-dot"></div>
+                                </div>
+                            </div>
+                            <div class="processing-step active">
+                                <div class="step-icon">🧠</div>
+                                <span>Pose Detection</span>
+                                <div class="processing-bar">
+                                    <div class="progress-fill" style="width: 87%;"></div>
+                                </div>
+                            </div>
+                            <div class="processing-step active">
+                                <div class="step-icon">🎯</div>
+                                <span>Shoulder Analysis</span>
+                                <div class="processing-bar">
+                                    <div class="progress-fill" style="width: 92%;"></div>
+                                </div>
+                            </div>
+                            <div class="processing-step">
+                                <div class="step-icon">⚡</div>
+                                <span>Target Lock</span>
+                                <div class="processing-bar">
+                                    <div class="progress-fill" style="width: 34%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detection-log">
+                            <h5>Detection Log</h5>
+                            <div class="log-entry">
+                                <span class="timestamp">12:34:56</span>
+                                <span class="log-text">Human detected at 15.2m</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="timestamp">12:34:57</span>
+                                <span class="log-text">Pose confidence: 96.8%</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="timestamp">12:34:58</span>
+                                <span class="log-text">Shoulder points acquired</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="timestamp">12:34:59</span>
+                                <span class="log-text glitch" data-text="Target lock initiated">Target lock initiated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Evolution to YOLOv11</h2>
+            <div class="comparison-container">
+                <div class="comparison-header">
+                    <h3>Technology Migration Overview</h3>
+                    <p>A comprehensive upgrade from basic detection to advanced pose estimation</p>
+                </div>
+                
+                <div class="comparison-table">
+                    <div class="comparison-row header">
+                        <div class="feature-label">Feature</div>
+                        <div class="old-system">Previous (YOLOv9)</div>
+                        <div class="new-system">Enhanced (YOLOv11)</div>
+                        <div class="improvement">Improvement</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Detection Method</div>
+                        <div class="old-system">Basic human detection</div>
+                        <div class="new-system">17-point pose estimation</div>
+                        <div class="improvement">+650% data points</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Targeting Precision</div>
+                        <div class="old-system">Center mass calculation</div>
+                        <div class="new-system">Shoulder center targeting</div>
+                        <div class="improvement">±2cm accuracy</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Detection Accuracy</div>
+                        <div class="old-system">95%</div>
+                        <div class="new-system">98.5%</div>
+                        <div class="improvement">+3.5% increase</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Processing Speed</div>
+                        <div class="old-system">33 FPS</div>
+                        <div class="new-system">30 FPS</div>
+                        <div class="improvement">Optimized quality</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Tracking Method</div>
+                        <div class="old-system">SORT algorithm</div>
+                        <div class="new-system">Skeletal tracking</div>
+                        <div class="improvement">Enhanced stability</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Safety Protocols</div>
+                        <div class="old-system">3-layer confirmation</div>
+                        <div class="new-system">5-layer validation</div>
+                        <div class="improvement">+67% safety margin</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Response Time</div>
+                        <div class="old-system">250ms</div>
+                        <div class="new-system">185ms</div>
+                        <div class="improvement">26% faster</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="feature-label">Range Detection</div>
+                        <div class="old-system">Visual only</div>
+                        <div class="new-system">Radar + Visual</div>
+                        <div class="improvement">20m+ coverage</div>
+                    </div>
+                </div>
+                
+                <div class="upgrade-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🎯</div>
+                        <h4>Precision Enhancement</h4>
+                        <p>Advanced shoulder targeting with millimeter precision for optimal engagement accuracy</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🧠</div>
+                        <h4>AI Intelligence</h4>
+                        <p>Next-generation neural network with human pose understanding and behavioral prediction</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🛡️</div>
+                        <h4>Enhanced Safety</h4>
+                        <p>Multi-layer confirmation system with pose verification and threat assessment protocols</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">📡</div>
+                        <h4>Dual Detection</h4>
+                        <p>Integrated radar and visual systems for comprehensive 360° surveillance coverage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-left">
+                    <h2>Experience the Future of Autonomous Defense</h2>
+                    <p>The A.T.L.A.S YOLOv11 system represents the pinnacle of defensive technology, combining cutting-edge AI with precision engineering for unmatched tactical superiority.</p>
+                    
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <span class="cta-icon">⚡</span>
+                            <span>Real-time pose detection and targeting</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="cta-icon">🎯</span>
+                            <span>±2cm shoulder-center precision</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="cta-icon">🛡️</span>
+                            <span>5-layer safety protocol system</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="cta-icon">📡</span>
+                            <span>20+ meter radar detection range</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-right">
+                    <div class="cta-stats">
+                        <div class="stat-circle">
+                            <div class="stat-number">98.5%</div>
+                            <div class="stat-desc">Detection Accuracy</div>
+                        </div>
+                        <div class="stat-circle">
+                            <div class="stat-number">185ms</div>
+                            <div class="stat-desc">Response Time</div>
+                        </div>
+                        <div class="stat-circle">
+                            <div class="stat-number">30</div>
+                            <div class="stat-desc">FPS Processing</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="documentation.html" class="cta-button primary">
+                            <span>View Technical Specs</span>
+                            <span class="button-arrow">→</span>
+                        </a>
+                        <a href="gallery.html" class="cta-button secondary">
+                            <span>See Gallery</span>
+                            <span class="button-arrow">→</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -173,9 +1151,9 @@
                         <h3>Real-Time Processing</h3>
                         <p>Lightning-fast detection and tracking with sub-200ms response time for immediate threat engagement.</p>
                         <ul>
-                            <li>33 FPS processing capability</li>
-                            <li>Multi-threading optimization</li>
-                            <li>Edge computing efficiency</li>
+                            <li>30 FPS YOLOv11 processing capability</li>
+                            <li>17-point pose estimation</li>
+                            <li>Real-time shoulder targeting</li>
                         </ul>
                     </div>
                 </div>
@@ -221,7 +1199,7 @@
                     <div class="spec-list">
                         <div class="spec-item">
                             <span class="spec-label">Accuracy</span>
-                            <span class="spec-value">±5cm at 2m</span>
+                            <span class="spec-value">±2cm at 2m</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Response Time</span>
@@ -229,11 +1207,11 @@
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Detection Rate</span>
-                            <span class="spec-value">95%+</span>
+                            <span class="spec-value">98.5%+</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Frame Rate</span>
-                            <span class="spec-value">33 FPS</span>
+                            <span class="spec-value">30 FPS</span>
                         </div>
                     </div>
                 </div>
@@ -263,11 +1241,11 @@
                     <div class="spec-list">
                         <div class="spec-item">
                             <span class="spec-label">Detection</span>
-                            <span class="spec-value">YOLOv9</span>
+                            <span class="spec-value">YOLOv11 + Pose</span>
                         </div>
                         <div class="spec-item">
-                            <span class="spec-label">Tracking</span>
-                            <span class="spec-value">SORT Algorithm</span>
+                            <span class="spec-label">Targeting</span>
+                            <span class="spec-value">Shoulder Center</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Control</span>
@@ -354,7 +1332,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="right-navbar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/right-navbar.js"></script>
+    <script src="js/mobile-enhancements.js"></script>
+    <script src="js/simulation.js"></script>
 </body>
 </html>

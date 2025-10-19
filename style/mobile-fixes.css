@@ -1,0 +1,340 @@
+/* Additional Mobile Fixes and Enhancements */
+
+/* Safe area support for devices with notch */
+:root {
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+}
+
+/* iOS viewport height fix */
+.hero {
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Navigation fixes for safe areas */
+.navbar {
+    padding-top: calc(1rem + var(--safe-area-top));
+    padding-left: calc(2rem + var(--safe-area-left));
+    padding-right: calc(2rem + var(--safe-area-right));
+}
+
+.nav-menu {
+    top: calc(70px + var(--safe-area-top));
+}
+
+/* Right navbar safe area adjustments */
+.right-navbar {
+    top: calc(90px + var(--safe-area-top));
+    right: calc(20px + var(--safe-area-right));
+    bottom: calc(20px + var(--safe-area-bottom));
+    overflow: hidden !important;
+    box-sizing: border-box;
+}
+
+/* Fix right navbar container overflow */
+.right-navbar * {
+    box-sizing: border-box;
+}
+
+.right-navbar .nav-item-right {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+/* Force icons to be visible in collapsed state */
+@media (max-width: 480px) {
+    .right-navbar {
+        min-width: 50px;
+        max-width: 50px;
+        transition: max-width 0.3s ease, width 0.3s ease;
+    }
+    
+    .right-navbar:hover {
+        max-width: 140px;
+    }
+    
+    .nav-item-right {
+        min-height: 36px;
+        position: relative;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .right-navbar:hover .nav-item-right {
+        justify-content: flex-start !important;
+    }
+    
+    /* Ensure both icon types are visible */
+    .nav-icon-img,
+    .nav-icon-right {
+        position: relative;
+        width: 22px !important;
+        height: 22px !important;
+        max-width: 22px;
+        max-height: 22px;
+        margin: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .right-navbar:hover .nav-icon-img,
+    .right-navbar:hover .nav-icon-right {
+        margin-right: 8px;
+    }
+    
+    /* Override any hiding styles */
+    .right-navbar .nav-icon-img,
+    .right-navbar .nav-icon-right {
+        transform: none !important;
+        filter: none !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .right-navbar {
+        min-width: 55px;
+        max-width: 55px;
+        transition: max-width 0.3s ease, width 0.3s ease;
+    }
+    
+    .right-navbar:hover {
+        max-width: 160px;
+    }
+    
+    .nav-item-right {
+        min-height: 40px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .right-navbar:hover .nav-item-right {
+        justify-content: flex-start !important;
+    }
+    
+    /* Ensure both icon types are visible */
+    .nav-icon-img,
+    .nav-icon-right {
+        width: 24px !important;
+        height: 24px !important;
+        max-width: 24px;
+        max-height: 24px;
+        margin: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .right-navbar:hover .nav-icon-img,
+    .right-navbar:hover .nav-icon-right {
+        margin-right: 8px;
+    }
+    
+    /* Override any hiding styles */
+    .right-navbar .nav-icon-img,
+    .right-navbar .nav-icon-right {
+        transform: none !important;
+        filter: none !important;
+    }
+}
+
+/* Loading states for buttons */
+.btn.loading,
+.tab-btn.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn.loading::after,
+.tab-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Keyboard focus indicators */
+.keyboard-focus {
+    outline: 2px solid #980000 !important;
+    outline-offset: 2px;
+}
+
+/* Mobile-specific animation reductions */
+.mobile-device.reduce-animations * {
+    animation-duration: 0.1s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.1s !important;
+}
+
+/* Touch feedback improvements */
+.mobile-device .btn:active,
+.mobile-device .tech-card:active,
+.mobile-device .feature-item:active,
+.mobile-device .spec-card:active,
+.mobile-device .tab-btn:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* Mobile navigation enhancements */
+.mobile-device .nav-menu.active {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-device .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-device .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-device .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Prevent body scroll when nav is open */
+body.nav-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Mobile typography improvements */
+@media (max-width: 480px) {
+    /* Prevent text from being too small */
+    .tech-card p,
+    .feature-content p,
+    .spec-card p {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+    
+    /* Improve readability of small text */
+    .stat-text,
+    .bar-label,
+    .component-item {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Ensure minimum touch target sizes */
+    .tab-btn,
+    .nav-link,
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Lazy loading image placeholder */
+img.lazy {
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.lazy::before {
+    content: '⚡';
+    color: #980000;
+    font-size: 2rem;
+}
+
+/* Performance optimizations */
+.mobile-device .tech-icon,
+.mobile-device .feature-visual > div,
+.mobile-device .rotating-system {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Improved form inputs for mobile */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid rgba(152, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #980000;
+        box-shadow: 0 0 10px rgba(152, 0, 0, 0.3);
+    }
+}
+
+/* Landscape mode adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding-top: calc(60px + var(--safe-area-top));
+    }
+    
+    .navbar {
+        height: 60px;
+    }
+    
+    .nav-menu {
+        top: calc(60px + var(--safe-area-top));
+    }
+    
+    .right-navbar {
+        top: calc(70px + var(--safe-area-top));
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tech-card,
+    .feature-item,
+    .spec-card {
+        border: 2px solid #ffffff;
+    }
+    
+    .btn {
+        border: 2px solid #980000;
+    }
+}

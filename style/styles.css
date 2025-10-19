@@ -44,7 +44,7 @@ html {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;  /* <-- Centers the logo */
     align-items: center;
     padding: 1rem 2rem;
     max-width: 1200px;
@@ -278,8 +278,8 @@ html {
     border: 2px solid rgba(152, 0, 0, 0.3);
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: -32%;
+    left: -18%;
     transform: translate(-50%, -50%);
     animation: pulse 2s ease-in-out infinite;
 }
@@ -296,6 +296,31 @@ html {
     animation: sweep 3s linear infinite;
     transform-origin: bottom center;
 }
+.radar-sweep2 {
+    width: 350px;
+    height: 350px;
+    border: 2px solid rgba(152, 0, 0, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.radar-sweep2::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 2px;
+    height: 175px;
+    background: linear-gradient(to bottom, #980000, transparent);
+    transform: translateX(-50%);
+    animation: sweep 3s linear infinite;
+    transform-origin: bottom center;
+}
+
 
 .targeting-grid {
     position: absolute;
@@ -309,7 +334,7 @@ html {
 
 .grid-line {
     position: absolute;
-    background: rgba(152, 0, 0, 0.4);
+    background: rgba(152, 0, 0, 0.898);
 }
 
 .grid-line.horizontal {
@@ -328,8 +353,8 @@ html {
 
 .crosshair {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 45%;
     width: 20px;
     height: 20px;
     border: 2px solid #980000;

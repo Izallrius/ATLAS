@@ -1,0 +1,718 @@
+/* Mobile Optimizations for A.T.L.A.S Website */
+
+/* Enhanced Mobile Viewport Settings */
+@viewport {
+    width: device-width;
+    initial-scale: 1.0;
+}
+
+/* Base Mobile Improvements */
+* {
+    box-sizing: border-box;
+}
+
+/* Touch-friendly elements */
+.nav-link,
+.btn,
+.tab-btn,
+.nav-item-right,
+.nav-item-floating {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile hamburger menu - All mobile devices */
+@media (max-width: 768px) {
+    /* Typography scaling */
+    html {
+        font-size: 14px;
+    }
+    
+    /* Navigation improvements - header navbar */
+    .navbar {
+        height: 60px;
+        padding: 0 1rem;
+    }
+    
+    .nav-logo .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .hamburger {
+        width: 25px;
+        height: 25px;
+        display: flex !important;
+        visibility: visible !important;
+        z-index: 1001;
+    }
+    
+    /* Main navigation menu - force visibility */
+    .navbar .nav-menu {
+        position: fixed !important;
+        top: 60px !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: calc(100vh - 60px) !important;
+        background: rgba(152, 0, 0, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding: 2rem 0 !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s ease !important;
+        z-index: 9998 !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+    
+    .navbar .nav-menu.active {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .nav-menu .nav-item {
+        margin: 1rem 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem !important;
+        padding: 1rem 2rem !important;
+        color: #ffffff !important;
+        display: block !important;
+        width: 100%;
+        border-bottom: 1px solid rgba(152, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        background: rgba(152, 0, 0, 0.2);
+        color: #ffffff !important;
+    }
+    
+    /* Hero section mobile optimization */
+    .hero {
+        min-height: 100vh;
+        padding: 60px 1rem 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .title-subtitle {
+        font-size: 0.9rem !important;
+        margin-top: 0.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 1.5rem 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Rotating system mobile scaling */
+    .rotating-system {
+        width: 280px !important;
+        height: 280px !important;
+        margin: 2rem auto;
+    }
+    
+    /* Technology cards mobile layout */
+    .tech-cards {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .tech-card {
+        padding: 1.5rem;
+    }
+    
+    .tech-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Workflow section mobile */
+    .workflow-section {
+        padding: 4rem 1rem;
+    }
+    
+    .workflow-diagram {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .workflow-step {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .workflow-arrow {
+        transform: rotate(90deg) !important;
+        margin: 0.5rem 0;
+    }
+    
+    /* Features section mobile */
+    .features-section {
+        padding: 4rem 1rem;
+    }
+    
+    .feature-item {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .feature-content ul {
+        text-align: left;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Specifications mobile */
+    .specs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    .spec-card {
+        padding: 1.5rem;
+    }
+    
+    /* Contact section mobile */
+    .contact-section {
+        padding: 4rem 1rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+    
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Footer mobile */
+    .footer {
+        padding: 3rem 1rem 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    /* Hide entire original right navbar on mobile */
+    .right-navbar {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
+    /* Mobile hamburger button */
+    .mobile-hamburger-btn {
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 60px !important;
+        height: 60px !important;
+        background: rgba(152, 0, 0, 0.9) !important;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(152, 0, 0, 0.8) !important;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+        cursor: pointer !important;
+        z-index: 9999 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+    
+    .mobile-hamburger-btn:hover {
+        background: rgba(152, 0, 0, 1) !important;
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(152, 0, 0, 0.4) !important;
+    }
+    
+    .mobile-hamburger-btn:active {
+        transform: scale(0.95);
+        background: rgba(152, 0, 0, 0.7) !important;
+    }
+    
+    /* Hamburger lines */
+    .hamburger-lines {
+        width: 24px !important;
+        height: 18px !important;
+        position: relative;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        pointer-events: none;
+    }
+    
+    .hamburger-lines span {
+        width: 100% !important;
+        height: 3px !important;
+        background: #ffffff !important;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+        display: block !important;
+        opacity: 1 !important;
+    }
+    
+    /* X animation when menu is open */
+    .mobile-hamburger-btn.active .hamburger-lines span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .mobile-hamburger-btn.active .hamburger-lines span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    .mobile-hamburger-btn.active .hamburger-lines span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Mobile menu overlay */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Mobile menu content */
+    .mobile-menu-content {
+        position: absolute;
+        bottom: 100px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu-overlay.active .mobile-menu-content {
+        transform: translateY(0);
+    }
+    
+    /* Menu items */
+    .mobile-menu-content .nav-item-right {
+        width: 60px !important;
+        height: 60px !important;
+        background: rgba(20, 20, 20, 0.95) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(152, 0, 0, 0.3);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    
+    .mobile-menu-overlay.active .mobile-menu-content .nav-item-right {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    .mobile-menu-overlay.active .mobile-menu-content .nav-item-right:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+    
+    .mobile-menu-overlay.active .mobile-menu-content .nav-item-right:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+    
+    .mobile-menu-overlay.active .mobile-menu-content .nav-item-right:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+    
+    .mobile-menu-overlay.active .mobile-menu-content .nav-item-right:nth-child(4) {
+        transition-delay: 0.25s;
+    }
+    
+    .mobile-menu-overlay.active .mobile-menu-content .nav-item-right:nth-child(5) {
+        transition-delay: 0.3s;
+    }
+    
+    @keyframes slideInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Icons styling for menu items */
+    .mobile-menu-content .nav-item-right .nav-icon-right,
+    .mobile-menu-content .nav-item-right .nav-icon-img {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        margin: 0 !important;
+        flex-shrink: 0;
+        object-fit: contain;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* Text labels hidden in mobile - icon-only */
+    .mobile-menu-content .nav-item-right .nav-text-right {
+        display: none !important;
+    }
+    
+    /* Hover effects for menu items */
+    .mobile-menu-content .nav-item-right:hover {
+        background: rgba(152, 0, 0, 0.3) !important;
+        transform: scale(1.1) !important;
+        box-shadow: 0 6px 20px rgba(152, 0, 0, 0.2);
+    }
+    
+    .mobile-menu-content .nav-item-right:active {
+        background: rgba(152, 0, 0, 0.5) !important;
+        transform: scale(0.95) !important;
+    }
+}
+
+/* Large mobile devices and tablets - also use hamburger */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Hide original right navbar on tablets too */
+    .right-navbar {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    html {
+        font-size: 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem !important;
+    }
+    
+    .rotating-system {
+        width: 350px !important;
+        height: 350px !important;
+    }
+    
+    .tech-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Tablet hamburger menu (slightly larger) */
+    .right-navbar {
+        width: 70px !important;
+        height: 70px !important;
+        top: auto !important;
+        right: 20px !important;
+        bottom: 20px !important;
+        border-radius: 15px !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        background: rgba(20, 20, 20, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(152, 0, 0, 0.3);
+    }
+    
+    .right-navbar.mobile-expanded {
+        width: 70px !important;
+        height: auto !important;
+        border-radius: 15px !important;
+        padding: 10px 0 !important;
+        background: rgba(20, 20, 20, 0.98);
+    }
+    
+    /* Tablet toggle button */
+    .mobile-nav-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 15px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    .mobile-toggle-icon {
+        width: 28px;
+        height: 22px;
+    }
+    
+    /* Tablet nav items - stacked vertically */
+    .right-navbar.mobile-expanded .nav-item-right {
+        padding: 15px 10px !important;
+        margin: 4px 0 !important;
+        width: 70px !important;
+        min-height: 52px;
+        justify-content: center !important;
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .right-navbar.mobile-expanded .nav-icon-right,
+    .right-navbar.mobile-expanded .nav-icon-img {
+        width: 26px !important;
+        height: 26px !important;
+        margin: 0 !important;
+    }
+    
+    /* Hide text labels on tablet too */
+    .right-navbar.mobile-expanded .nav-text-right {
+        display: none !important;
+    }
+}
+
+/* Gallery-specific mobile optimizations */
+@media (max-width: 480px) {
+    .gallery-header {
+        padding: 80px 1rem 4rem;
+    }
+    
+    .gallery-title {
+        font-size: 2rem !important;
+    }
+    
+    .gallery-description {
+        font-size: 1rem;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    
+    /* Demo cards mobile */
+    .demo-card {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .demo-screen {
+        height: 200px !important;
+        margin: 0 auto;
+    }
+    
+    .demo-stats {
+        gap: 0.5rem !important;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        min-width: 100px;
+        padding: 0.5rem;
+    }
+    
+    /* 3D Model section mobile */
+    .model-container {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .turret-3d {
+        width: 200px !important;
+        height: 200px !important;
+        margin: 0 auto;
+    }
+    
+    .component-list {
+        gap: 0.3rem;
+    }
+    
+    /* Testing section mobile */
+    .test-summary {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    .summary-card {
+        padding: 1rem;
+    }
+    
+    /* Deployment tabs mobile */
+    .tab-buttons {
+        gap: 0.3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tab-btn {
+        padding: 0.6rem 1rem !important;
+        font-size: 0.8rem !important;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .scenario-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .scenario-visual {
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .deployment-stats {
+        gap: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .deploy-stat {
+        min-width: 80px;
+    }
+}
+
+/* Landscape orientation optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 60px 2rem 1rem;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .rotating-system {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .workflow-diagram {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .workflow-arrow {
+        transform: rotate(0deg) !important;
+    }
+}
+
+/* Touch interaction improvements */
+@media (hover: none) and (pointer: coarse) {
+    .tech-card:hover,
+    .feature-item:hover,
+    .spec-card:hover {
+        transform: none;
+    }
+    
+    .tech-card:active,
+    .feature-item:active,
+    .spec-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .btn:active {
+        transform: scale(0.96);
+    }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .nav-icon-img,
+    .laser-icon,
+    .detection-icon,
+    .servo-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Accessibility improvements for mobile */
+@media (prefers-reduced-motion: reduce) {
+    .rotating-system,
+    .tech-icon,
+    .workflow-step,
+    .feature-visual > div {
+        animation: none !important;
+    }
+    
+    .nav-menu {
+        transition: none;
+    }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        min-height: -webkit-fill-available;
+    }
+    
+    .nav-menu {
+        -webkit-overflow-scrolling: touch;
+    }
+}
